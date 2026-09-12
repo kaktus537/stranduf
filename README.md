@@ -5,6 +5,7 @@ Enkel hemsida för Strand UF — klippning med utkörning i Kalix.
 ## Innehåll
 
 - `index.html` — startsida: erbjudandet (hembesök 250 kr) och äldreboenden
+- `produkter.html` — hårprodukter med bild och pris
 - `boka.html` — bokning via inbäddad cal.com-kalender
 - `css/style.css` — gemensam stilmall
 
@@ -13,6 +14,9 @@ Enkel hemsida för Strand UF — klippning med utkörning i Kalix.
 - **Telefon och mejl** — placeholders `070 – 123 45 67` och `hej@stranduf.se`
   finns i sidfoten på båda sidorna.
 - **cal.com** — variabeln `CAL_LINK` längst ner i `boka.html`.
+- **Produkterna** — `produkter.html` innehåller sex platshållarkort. Byt namn och
+  pris, lägg produktbilderna i `images/produkter/` och peka om `src` på varje
+  `<img>`. Kopiera ett `<article class="product">`-block för att lägga till fler.
 - **Loggan** — startsidan ritar loggan som SVG. Vill ni använda originalfilen,
   lägg den som `images/logo.png` och byt ut `<svg class="mark">`-blocket mot
   `<img class="mark" src="images/logo.png" alt="Strand UF">`.

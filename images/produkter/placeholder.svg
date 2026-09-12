@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Produktbild saknas">
+  <rect width="400" height="400" fill="#efedea"/>
+  <g fill="none" stroke="#c9c5c0" stroke-width="2">
+    <rect x="150" y="140" width="100" height="140" rx="6"/>
+    <path d="M178 140 v-22 h44 v22"/>
+    <path d="M150 180 h100"/>
+  </g>
+  <text x="200" y="330" text-anchor="middle" fill="#a9a5a0"
+        font-family="Inter, Segoe UI, sans-serif" font-size="15" letter-spacing="3">BILD</text>
+</svg>

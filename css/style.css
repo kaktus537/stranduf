@@ -77,6 +77,11 @@ p { margin: 0 0 1.1em; }
   padding-left: 0.42em;
 }
 
+.site-header nav {
+  display: flex;
+  gap: clamp(16px, 4vw, 28px);
+}
+
 .site-header nav a {
   font-size: 0.82rem;
   letter-spacing: 0.16em;
@@ -197,3 +202,37 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 
 .site-footer p { margin: 0 0 6px; }
 .site-footer p:last-child { margin: 0; }
+
+/* ---------- Produkter ---------- */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 4vw, 40px) clamp(18px, 3vw, 28px);
+  margin-top: clamp(32px, 5vw, 48px);
+}
+
+.product img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #efedea;
+  border: 1px solid var(--line);
+}
+
+.product h2 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin: 14px 0 2px;
+}
+
+.product p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 620px) {
+  .products { grid-template-columns: repeat(2, 1fr); }
+}
