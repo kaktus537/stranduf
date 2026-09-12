@@ -97,8 +97,12 @@ p { margin: 0 0 1.1em; }
 /* ---------- Logga ---------- */
 
 .mark {
-  width: clamp(140px, 34vw, 190px);
+  width: clamp(180px, 46vw, 260px);
+  height: auto;
   margin-inline: auto;
+  /* Loggan har vit bakgrund - detta smälter in den i sidans bakgrund
+     utan att bilden i sig ändras. */
+  mix-blend-mode: multiply;
 }
 
 /* ---------- Innehåll ---------- */
@@ -149,6 +153,22 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 }
 
 .btn:hover { background: transparent; color: var(--ink); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+  padding: 12px 30px;
+}
+
+.btn-ghost:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+.row .btn-ghost { margin-top: 14px; }
+
+.page-cta {
+  text-align: center;
+  margin-top: clamp(32px, 6vw, 48px);
+}
 
 .rows { padding-block: clamp(40px, 7vw, 64px); }
 

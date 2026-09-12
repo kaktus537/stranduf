@@ -4,7 +4,7 @@ Enkel hemsida för Strand UF — klippning med utkörning i Kalix.
 
 ## Innehåll
 
-- `index.html` — startsida: erbjudandet (hembesök 250 kr) och äldreboenden
+- `index.html` — startsida: logga, pris, äldreboenden och länk till produkterna
 - `produkter.html` — hårprodukter med bild och pris
 - `boka.html` — bokning via inbäddad cal.com-kalender
 - `css/style.css` — gemensam stilmall
@@ -17,9 +17,9 @@ Enkel hemsida för Strand UF — klippning med utkörning i Kalix.
 - **Produkterna** — `produkter.html` innehåller sex platshållarkort. Byt namn och
   pris, lägg produktbilderna i `images/produkter/` och peka om `src` på varje
   `<img>`. Kopiera ett `<article class="product">`-block för att lägga till fler.
-- **Loggan** — startsidan ritar loggan som SVG. Vill ni använda originalfilen,
-  lägg den som `images/logo.png` och byt ut `<svg class="mark">`-blocket mot
-  `<img class="mark" src="images/logo.png" alt="Strand UF">`.
+- **Loggan** — startsidan visar originalloggan, oredigerad. Spara logotypfilen
+  som `images/logo.png` så syns den på startsidan. Är filen en jpg heter den
+  `images/logo.jpg` — ändra då `src` i `index.html` till det.
 
 ## Kör lokalt
 
