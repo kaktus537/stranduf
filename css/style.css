@@ -111,8 +111,7 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 
 .hero {
   text-align: center;
-  padding-bottom: clamp(48px, 8vw, 80px);
-  border-bottom: 1px solid var(--line);
+  padding-bottom: clamp(36px, 6vw, 56px);
 }
 
 .hero h1 { margin-top: clamp(28px, 5vw, 40px); }
@@ -126,9 +125,52 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 
 .price {
   font-family: var(--font-head);
-  font-size: clamp(2.4rem, 8vw, 3.2rem);
+  font-size: clamp(2.1rem, 6vw, 2.7rem);
   line-height: 1;
-  margin: 4px 0 6px;
+  margin: 4px 0 10px;
+}
+
+/* ---------- Klippning och produkter: två likvärdiga kort ---------- */
+
+.paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 3vw, 24px);
+  padding-bottom: clamp(40px, 7vw, 64px);
+  border-bottom: 1px solid var(--line);
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: clamp(26px, 4vw, 38px) clamp(18px, 3vw, 28px);
+}
+
+.path h2 {
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.path-text {
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  max-width: 28ch;
+  margin: 0 0 24px;
+}
+
+.path .btn { margin-top: auto; }
+
+@media (max-width: 600px) {
+  .paths { grid-template-columns: 1fr; }
+  .path .btn { width: 100%; }
 }
 
 .price-note {
@@ -167,8 +209,14 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 
 .page-cta {
   text-align: center;
-  margin-top: clamp(32px, 6vw, 48px);
+  margin-top: clamp(40px, 7vw, 64px);
+  padding-top: clamp(32px, 5vw, 48px);
+  border-top: 1px solid var(--line);
 }
+
+.page-cta .lead { margin-bottom: 26px; }
+
+.page-cta .btn { margin: 0 6px 10px; }
 
 .rows { padding-block: clamp(40px, 7vw, 64px); }
 
