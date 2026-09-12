@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boka tid — Strand UF</title>
+  <meta name="description" content="Boka din frisörtid hos Strand UF direkt i kalendern. Välj tjänst, dag och tid som passar dig.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Strand<span>.</span>UF</a>
+      <nav class="nav">
+        <a href="index.html">Hem</a>
+        <a href="priser.html">Produkter</a>
+        <a href="boka.html" class="btn btn-primary">Boka tid</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Bokning</p>
+          <h2>Boka din tid</h2>
+          <p class="lead">
+            Välj tjänst, dag och tid direkt i kalendern nedan. Du får en bekräftelse
+            via mejl med en länk om du behöver boka om eller avboka.
+          </p>
+        </div>
+
+        <!-- cal.com inbäddad kalender -->
+        <div class="cal-embed" id="cal-inline">
+          <noscript>
+            <div class="cal-fallback">
+              <p>Aktivera JavaScript för att se bokningskalendern, eller
+                <a href="https://cal.com/stranduf" target="_blank" rel="noopener">boka via cal.com</a>.
+              </p>
+            </div>
+          </noscript>
+        </div>
+
+        <p style="margin-top:20px;color:var(--muted);font-size:0.93rem;">
+          Kalendern laddas inte? Du kan också
+          <a href="https://cal.com/stranduf" target="_blank" rel="noopener">boka direkt på cal.com</a>
+          eller ringa oss på <a href="tel:+46701234567">070 – 123 45 67</a>.
+        </p>
+
+        <div class="booking-steps">
+          <div class="grid grid-3">
+            <article class="card">
+              <span class="num">01</span>
+              <h3>Välj tjänst</h3>
+              <p>Klippning, färg eller styling — välj det som passar och se hur lång tid det tar.</p>
+            </article>
+            <article class="card">
+              <span class="num">02</span>
+              <h3>Välj tid</h3>
+              <p>Kalendern visar bara tider som faktiskt är lediga, så inget dubbelbokas.</p>
+            </article>
+            <article class="card">
+              <span class="num">03</span>
+              <h3>Kom som du är</h3>
+              <p>Vi börjar alltid med en konsultation innan saxen kommer fram.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:clamp(32px,5vw,48px);margin-bottom:0;">
+          <strong>Av- och ombokning.</strong> Hör av dig senast 24 timmar innan din tid,
+          annars kan vi behöva ta ut halva behandlingsavgiften.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html">Strand<span>.</span>UF</a>
+          <p style="margin-top:14px;max-width:34ch;font-size:0.95rem;">
+            En frisörsalong driven av unga företagare inom Ung Företagsamhet.
+          </p>
+        </div>
+        <div>
+          <h3>Sidor</h3>
+          <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="boka.html">Boka tid</a></li>
+            <li><a href="priser.html">Produkter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kontakt</h3>
+          <ul>
+            <li>Strandvägen 1, 123 45 Staden</li>
+            <li><a href="tel:+46701234567">070 – 123 45 67</a></li>
+            <li><a href="mailto:hej@stranduf.se">hej@stranduf.se</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Strand UF</span>
+        <span>Org.nr 000000–0000</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===========================================================
+       cal.com — inbäddad bokningskalender
+       Byt ut CAL_LINK mot ert eget användarnamn/eventtyp på cal.com,
+       t.ex. "stranduf" (alla tjänster) eller "stranduf/klippning".
+       Samma namn används i länkarna ovan.
+       =========================================================== -->
+  <script>
+    var CAL_LINK = "stranduf";
+  </script>
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://cal.com" });
+
+    Cal("inline", {
+      elementOrSelector: "#cal-inline",
+      calLink: CAL_LINK,
+      layout: "month_view"
+    });
+
+    Cal("ui", {
+      layout: "month_view",
+      hideEventTypeDetails: false,
+      cssVarsPerTheme: {
+        light: { "cal-brand": "#a8744f" }
+      }
+    });
+  </script>
+
+</body>
+</html>
