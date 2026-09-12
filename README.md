@@ -14,7 +14,7 @@ Enkel hemsida för Strand UF — klippning med utkörning i Kalix.
 - **Telefon och mejl** — placeholders `070 – 123 45 67` och `hej@stranduf.se`
   finns i sidfoten på båda sidorna.
 - **cal.com** — klart. `CAL_LINK` längst ner i `boka.html` pekar på
-  `ivar-sandlund-dlryxz/30min`. Byter ni eventtyp på cal.com är det den
+  `ivar-sandlund-dlryxz/klippning`. Byter ni eventtyp på cal.com är det den
   variabeln som ska ändras.
 - **Produkterna** — `produkter.html` innehåller sex platshållarkort. Byt namn och
   pris, lägg produktbilderna i `images/produkter/` och peka om `src` på varje
