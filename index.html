@@ -3,212 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Strand UF — Frisör</title>
-  <meta name="description" content="Strand UF är en frisörsalong driven av unga företagare. Klippning, färg och styling till studentvänliga priser.">
+  <title>Strand UF — Klippning med utkörning i Kalix</title>
+  <meta name="description" content="Strand UF klipper hemma hos dig i Kalix för 250 kr. Vi klipper även på äldreboenden.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="index.html">Strand<span>.</span>UF</a>
-      <nav class="nav">
-        <a href="index.html" class="active">Hem</a>
-        <a href="priser.html">Produkter</a>
-        <a href="boka.html" class="btn btn-primary">Boka tid</a>
-      </nav>
+      <a class="wordmark" href="index.html">Strand</a>
+      <nav><a href="boka.html">Boka tid</a></nav>
     </div>
   </header>
 
   <main>
+    <div class="wrap">
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">Frisörsalong · Ung Företagsamhet</p>
-          <h1>Ett klipp som känns som du.</h1>
-          <p class="lead">
-            Strand UF är en frisörsalong driven av unga företagare. Vi tar oss tid att
-            lyssna, ger ärliga råd och lämnar dig med en frisyr som är enkel att sköta
-            hemma — till priser som funkar för alla plånböcker.
-          </p>
-          <div class="hero-actions">
-            <a href="boka.html" class="btn btn-primary">Boka tid</a>
-            <a href="#tjanster" class="btn btn-ghost">Se våra tjänster</a>
-          </div>
+      <section class="hero">
+
+        <!-- Loggan. Vill ni använda originalfilen i stället: lägg den som
+             images/logo.png och byt ut hela <svg>-blocket mot
+             <img class="mark" src="images/logo.png" alt="Strand UF"> -->
+        <svg class="mark" viewBox="0 0 200 200" role="img" aria-label="Strand UF">
+          <g fill="none" stroke="#3a3a3a" stroke-width="1.2">
+            <circle cx="100" cy="100" r="96"/>
+          </g>
+          <g fill="none" stroke="#5c5c5c" stroke-width="1.3">
+            <path d="M126 34 C 114 58, 132 76, 120 102"/>
+            <path d="M134 40 C 124 62, 140 80, 128 104"/>
+          </g>
+          <g fill="none" stroke="#3a3a3a" stroke-width="4" stroke-linecap="round">
+            <path d="M86 92 L 114 38"/>
+            <path d="M114 92 L 86 38"/>
+          </g>
+          <g fill="none" stroke="#3a3a3a" stroke-width="3">
+            <circle cx="81" cy="99" r="8"/>
+            <circle cx="119" cy="99" r="8"/>
+          </g>
+          <circle cx="100" cy="65" r="2" fill="#3a3a3a"/>
+          <text x="105" y="143" text-anchor="middle" fill="#3a3a3a"
+                font-family="Cormorant Garamond, Georgia, serif" font-size="24" letter-spacing="11">STRAND</text>
+          <g stroke="#3a3a3a" stroke-width="1">
+            <path d="M44 157 H 86"/>
+            <path d="M114 157 H 156"/>
+          </g>
+          <text x="102" y="161" text-anchor="middle" fill="#3a3a3a"
+                font-family="Cormorant Garamond, Georgia, serif" font-size="11" letter-spacing="4">UF</text>
+        </svg>
+
+        <h1>Vi klipper där du är.</h1>
+        <p class="lead">Klippning för alla i Kalix — vi kommer hem till dig.</p>
+
+        <p class="price">250 kr</p>
+        <p class="price-note">Hembesök ingår</p>
+
+        <a class="btn" href="boka.html">Boka tid</a>
+      </section>
+
+      <section class="rows">
+        <div class="row">
+          <h2>Hemma hos dig</h2>
+          <p>Du bokar en tid, vi tar med oss allt som behövs och klipper hemma hos dig.</p>
         </div>
-
-        <aside class="hero-card">
-          <h3>Öppettider</h3>
-          <ul class="hours">
-            <li><span>Måndag – Torsdag</span><span>15:00 – 19:00</span></li>
-            <li><span>Fredag</span><span>13:00 – 18:00</span></li>
-            <li><span>Lördag</span><span>10:00 – 15:00</span></li>
-            <li><span>Söndag</span><span>Stängt</span></li>
-          </ul>
-          <p style="margin-top:20px;color:var(--muted);font-size:0.93rem;">
-            Strandvägen 1, 123 45 Staden<br>
-            <a href="tel:+46701234567">070 – 123 45 67</a>
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Om oss -->
-    <section class="alt" id="om">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Om oss</p>
-          <h2>Unga frisörer med gammalt hantverk i ryggen</h2>
-          <p class="lead">
-            Vi startade Strand UF för att visa att en salongsupplevelse inte behöver vara
-            dyr eller stel. Bakom stolen står elever från frisörprogrammet — nyfikna,
-            noggranna och utbildade av erfarna handledare som finns med hela vägen.
-          </p>
+        <div class="row">
+          <h2>Äldreboenden</h2>
+          <p>Vi klipper även på äldreboenden och liknande verksamheter i Kalix. Hör av er så bokar vi in en dag.</p>
         </div>
+      </section>
 
-        <div class="grid grid-3">
-          <article class="card">
-            <span class="num">01</span>
-            <h3>Konsultation ingår</h3>
-            <p>
-              Varje bokning börjar med ett samtal om hårtyp, vardag och vad du faktiskt
-              vill ha. Inga överraskningar i spegeln.
-            </p>
-          </article>
-          <article class="card">
-            <span class="num">02</span>
-            <h3>Skonsamma produkter</h3>
-            <p>
-              Vi arbetar med silikonfria och djurförsöksfria produkter som är snälla mot
-              både hårbotten och miljö.
-            </p>
-          </article>
-          <article class="card">
-            <span class="num">03</span>
-            <h3>Ärliga priser</h3>
-            <p>
-              Priset du ser är priset du betalar. Är du student eller under 18 år får du
-              alltid rabatt på klippning.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tjänster -->
-    <section id="tjanster">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Vad vi erbjuder</p>
-          <h2>Tjänster &amp; priser</h2>
-          <p class="lead">
-            Alla behandlingar inkluderar tvätt, konsultation och styling. Tidsåtgången är
-            ungefärlig — vi stressar aldrig igenom ett klipp.
-          </p>
-        </div>
-
-        <div class="service-list">
-          <div class="service">
-            <div>
-              <h3>Klippning, kort hår</h3>
-              <p>Tvätt, klippning och föning · ca 45 min</p>
-            </div>
-            <div class="price">350 kr</div>
-          </div>
-
-          <div class="service">
-            <div>
-              <h3>Klippning, långt hår</h3>
-              <p>Tvätt, klippning och styling · ca 60 min</p>
-            </div>
-            <div class="price">450 kr</div>
-          </div>
-
-          <div class="service">
-            <div>
-              <h3>Klippning, barn under 12 år</h3>
-              <p>Tvätt och klippning · ca 30 min</p>
-            </div>
-            <div class="price">250 kr</div>
-          </div>
-
-          <div class="service">
-            <div>
-              <h3>Färgning, helfärg</h3>
-              <p>Färg, tvätt och föning · ca 2 tim</p>
-            </div>
-            <div class="price">från 850 kr</div>
-          </div>
-
-          <div class="service">
-            <div>
-              <h3>Slingor</h3>
-              <p>Folieslingor, toning och styling · ca 2,5 tim</p>
-            </div>
-            <div class="price">från 1 100 kr</div>
-          </div>
-
-          <div class="service">
-            <div>
-              <h3>Styling inför fest</h3>
-              <p>Uppsättning eller locksättning · ca 45 min</p>
-            </div>
-            <div class="price">400 kr</div>
-          </div>
-
-          <div class="service">
-            <div>
-              <h3>Skägg &amp; trim</h3>
-              <p>Formning och rakning med kniv · ca 30 min</p>
-            </div>
-            <div class="price">200 kr</div>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="boka.html" class="btn btn-primary">Boka din tid</a>
-          <a href="priser.html" class="btn btn-ghost">Se hårprodukter</a>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <a class="logo" href="index.html">Strand<span>.</span>UF</a>
-          <p style="margin-top:14px;max-width:34ch;font-size:0.95rem;">
-            En frisörsalong driven av unga företagare inom Ung Företagsamhet.
-          </p>
-        </div>
-        <div>
-          <h3>Sidor</h3>
-          <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="boka.html">Boka tid</a></li>
-            <li><a href="priser.html">Produkter</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Kontakt</h3>
-          <ul>
-            <li>Strandvägen 1, 123 45 Staden</li>
-            <li><a href="tel:+46701234567">070 – 123 45 67</a></li>
-            <li><a href="mailto:hej@stranduf.se">hej@stranduf.se</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Strand UF</span>
-        <span>Org.nr 000000–0000</span>
-      </div>
+      <p><a href="tel:+46701234567">070 – 123 45 67</a> · <a href="mailto:hej@stranduf.se">hej@stranduf.se</a></p>
+      <p>Strand UF · Kalix</p>
     </div>
   </footer>
 
