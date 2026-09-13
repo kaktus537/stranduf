@@ -68,13 +68,30 @@ p { margin: 0 0 1.1em; }
 }
 
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-family: var(--font-head);
   font-size: 1.15rem;
   letter-spacing: 0.42em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--ink);
-  padding-left: 0.42em;
+}
+
+/* Loggan i sidhuvudet. Samma bild som på startsidan, bara mindre.
+   mix-blend-mode smälter in den vita bakgrunden i sidhuvudet. */
+.wordmark-logo {
+  height: 40px;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
+.wordmark span { padding-left: 0.42em; }
+
+@media (max-width: 420px) {
+  .wordmark-logo { height: 32px; }
+  .wordmark span { display: none; }
 }
 
 .site-header nav {
