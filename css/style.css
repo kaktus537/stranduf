@@ -427,14 +427,28 @@ main { padding-block: clamp(52px, 10vw, 96px); }
   text-align: center;
 }
 
-.team-member img {
+/* Alla tre rutorna är exakt lika stora. Bilderna är tagna på olika avstånd,
+   så varje person zoomas och placeras via --zoom/--x/--y i om-oss.html för
+   att hamna i samma skala i rutan. */
+.team-photo {
+  position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
+  overflow: hidden;
   background: #efedea;
   border: 1px solid var(--line);
   margin-bottom: 14px;
+}
+
+/* --zoom = bildens bredd i förhållande till rutan, --x andel av rutans bredd,
+   --y andel av rutans höjd. */
+.team-photo img {
+  position: absolute;
+  left: calc(var(--x, 0) * 100%);
+  top: calc(var(--y, 0) * 100%);
+  width: calc(var(--zoom, 1) * 100%);
+  max-width: none;
+  height: auto;
 }
 
 .team-name {
@@ -455,5 +469,5 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 @media (max-width: 620px) {
   .team-list { grid-template-columns: 1fr; gap: clamp(26px, 6vw, 36px); }
   /* Bilderna blir annars enormt höga när de ligger i en kolumn. */
-  .team-member img { max-width: 320px; margin-inline: auto; }
+  .team-photo { max-width: 320px; margin-inline: auto; }
 }
