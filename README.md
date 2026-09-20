@@ -41,3 +41,24 @@ hur det går till och listar de tre kontaktvägarna. Länkar dit finns i menyn, 
 en banner på startsidan, i raden «Klippning på gruppboenden» och överst på
 `boka.html`.
 
+
+## SEO
+
+Adressen `https://stranduf.se` är inbakad på flera ställen. Byter ni domän måste
+den bytas i `sitemap.xml`, `robots.txt`, `CNAME` och i varje sidas `<head>`
+(`canonical`, `og:url`, `og:image` och den strukturerade datan på startsidan).
+
+- **Varje sida** har egen `<title>`, `description`, `canonical` och
+  Open Graph-taggar (rubrik och logga när länken delas i sociala medier).
+- **`sitemap.xml`** listar de fem sidorna. Lägg till nya sidor här och uppdatera
+  `lastmod` när en sida ändras.
+- **`robots.txt`** släpper in alla sökmotorer och pekar på sitemapen.
+- **`CNAME`** talar om för GitHub Pages att sidan ligger på `stranduf.se`.
+- **`404.html`** visas vid felaktig adress och är märkt `noindex`.
+- **Strukturerad data** (JSON-LD) i `index.html` beskriver företaget för Google:
+  adress, telefon, Instagram och de tre priserna. Ändras priser eller
+  kontaktuppgifter ska de ändras där också. Övriga sidor har brödsmulor.
+
+Efter publicering: lägg till sidan i [Google Search Console](https://search.google.com/search-console)
+och skicka in `https://stranduf.se/sitemap.xml`. Skapa gärna även en
+Google Företagsprofil — för lokala sökningar som «frisör Kalix» väger den tyngst.

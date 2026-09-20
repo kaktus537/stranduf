@@ -1,0 +1,5 @@
+# Alla sökmotorer får läsa hela sidan.
+User-agent: *
+Allow: /
+
+Sitemap: https://stranduf.se/sitemap.xml

@@ -419,8 +419,12 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 /* En bild per person, med namn och roll under. */
 .team-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* minmax(0, 1fr) och inte 1fr: annars kan ett långt ord i en roll-rad
+     (t.ex. MARKNADSFÖRINGSANSVARIG) tvinga isär sin kolumn så att bilderna
+     blir olika stora. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(18px, 3vw, 28px);
+  align-items: start;
   list-style: none;
   margin: clamp(32px, 5vw, 48px) 0 0;
   padding: 0;
@@ -460,6 +464,7 @@ main { padding-block: clamp(52px, 10vw, 96px); }
 
 .team-role {
   font-size: 0.78rem;
+  overflow-wrap: break-word;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
