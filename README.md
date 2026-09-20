@@ -17,7 +17,8 @@ Enkel hemsida för Strand UF — klippning med utkörning i Kalix.
   alla sidor och i kontaktkorten på `gruppboenden.html`.
 - **Priser** — 280 kr med utkörning, 250 kr om kunden kommer till Flygfältsvägen 35.
 - **cal.com** — klart. `CAL_LINK` längst ner i `boka.html` pekar på
-  `harklippning` (dvs. https://cal.com/harklippning). Byter ni eventtyp är det den
+  `strand-uf-n9vhuy/harklippnings` (dvs.
+  https://cal.com/strand-uf-n9vhuy/harklippnings). Byter ni eventtyp är det den
   variabeln som ska ändras.
 - **Produkterna** — `produkter.html` innehåller sex platshållarkort. Byt namn och
   pris, lägg produktbilderna i `images/produkter/` och peka om `src` på varje
